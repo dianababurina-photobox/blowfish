@@ -11,20 +11,4 @@ module.exports = {
         globalObject: 'typeof self !== \'undefined\' ? self : this',
     },
     mode: 'production',
-    module: {
-        rules: [{
-            test: /\.js$/,
-            use: {
-                loader: 'babel-loader',
-                options: {
-                    babelrc: false,
-                    presets: [['@babel/preset-env', {
-                        modules: false,
-                        loose: true,
-                    }]],
-                    cacheDirectory: true,
-                },
-            },
-        }],
-    },
 };
